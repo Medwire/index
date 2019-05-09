@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="head">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0;minimum-scale=1.0; maximum-scale=1.0; user-scalable=yes;" />
+<title>今日医讯App下载</title>
+<meta content="今日医讯" name="description" />
+<meta content="今日医讯" name="keywords" />
+<style type="text/css">
+body {padding: 0; margin: 0;font-family:Arial,Helvetica,sans-serif;line-height:1.6;background:#fff;font-size:14px;color:#333;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;text-rendering:optimizeLegibility}
+img,a img,img:focus{border:0;outline:0}
+img{max-width:100%;height: auto;}
+p {margin: 0; padding: 0;}
+.tips_center{width:86%;margin:0 auto;margin-top:20%;margin-bottom:6%}
+.tips_center img{width:100%}
+.tips_bottom{position:absolute;width:100%}
+.tips_bottom_1{width:18%;margin-left:41%;margin-bottom:2%}
+.tips_bottom_1 img{width:100%}
+.tips_bottom_2{width:36%;margin-left:32%}
+.tips_bottom_2 img{width:100%}
+.device{background:#01ce9b;position:absolute;width:100%;height:100%}
+.abodytips{position:absolute;top:0;left:0;height:100%;width:100%;background:url(images/Ias_alltips.png);background-size:100% 100%;z-index:10;display:none;cursor:pointer}
+/*****6.24新版手机页****/
+.Download_content{ max-width: 640px; margin: 0 auto;}
+.tubiao{width:44%;margin:0px auto 40px auto;padding-top:30px;text-align:center}
+.tubiao img{width:80%;border-radius:20px}
+.dns{font-size:24px;color:#46474b;padding:14px 0 0px 0}
+.fenlsid a{display:block;width:226px;margin:0px auto;border-radius:8px}
+.fenlsid_ios{background:#2b91e3;border-radius:8px;width:226px;height:63px;margin:0 auto}
+.fenlsid_ios img,.fenlsid_and img{float:left;width:40px;margin:8px 20px 0 22px}
+.ios_2,.and_2{float:left;color:#fff;padding-top:18px}
+.iphone,.and{font-size:18px}
+.fenlsid_and{background:#78bc43;border-radius:8px;width:226px;height:63px;margin:0 auto;margin-top:18px}
+.miaoshu{width:90%;margin:0 auto;margin-top:57px}
+.miaoshu_t{padding-top:20px}
+.miaoshu_t img{height:20px}
+.miaoshu_t span{color:#515151;font-size:14px;padding-left:10px;line-height:20px}
+.miaoshu_t p{color:#a5a5a5;font-size:12px;padding-left:14px;padding-top:10px}
+.erwei{width:50%;margin:0 auto;margin-top:40px;text-align:center;padding-bottom:40px}
+.erwei img{width:100%}
+.erwei p{color:#a5a5a5;line-height:28px;font-size:13px}
+/*** 新手机端下载页面END **/
+#weixin-tip{display:none;position:fixed;left:0;top:0;background:rgba(0,0,0,0.8);filter:alpha(opacity=80);width:100%;height:100%;z-index:100;}
+#weixin-tip p{text-align:center;margin-top:10%;padding:0 5%;position:relative;}
+#weixin-tip .close{color:#fff;padding:5px;font:bold 20px/24px simsun;text-shadow:0 1px 0 #ddd;position:absolute;top:0;left:5%;}
+</style>
+</head>
+<body>
+<div id="weixin-tip"><p><img src="live_weixin.png" alt="微信扫描打开APP下载链接提示代码优化" alt="微信打开"/><span id="close" title="关闭" class="close">×</span></p></div>
+<div class="Download_content">
+<div class="tubiao">
+<img src="http://file.bio-phase.com/31393edc1b48bbc32b04/icon512.svg" />
+<p class="dns">今日医讯</p>
+
+<p class="banben">请用<b style=" color: red;">浏览器</b>打开该页面网址安装App</p>
+</div>
+<div class="fenlsid">
+<a href="itms-apps://itunes.apple.com/app/id1456450554">
+	<div class="fenlsid_ios"><img src="http://file.bio-phase.com/2a1ad2819afbcb7c6b04/ias_ios.png" /><div class="ios_2"><p class="iphone">iPhone版下载</p><p class="size"></p></div><div style="clear:both"></div></div>
+</a>
+
+<br/>
+
+  <a id="J_weixin" href="http://file.bio-phase.com/045fb6201ca40f05befe/app-release_1.3.3.apk">
+  	<div class="fenlsid_and"><img src="http://file.bio-phase.com/2dd4cd952497c489c4eb/ias_and.png" /><div class="and_2"><p class="and">Andriod版下载</p><p class="size2"></p></div><div style="clear:both"></div></div>
+  </a>
+ </div>
+ <div class="miaoshu">
+</div>
+<script type="text/javascript">
+	var is_weixin = (function() {
+	    var ua = navigator.userAgent.toLowerCase();
+	    if (ua.match(/MicroMessenger/i) == "micromessenger") {
+	        return true;
+	    } else {
+	        return false;
+	    }
+	})();
+	window.onload = function(){
+		var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+		var btn = document.getElementById('J_weixin');
+		var tip = document.getElementById('weixin-tip');
+		var close = document.getElementById('close');
+		if(is_weixin){
+			btn.onclick = function(e){
+				tip.style.height = winHeight + 'px';
+				tip.style.display = 'block';
+				return false;
+			}
+			close.onclick = function(){
+				tip.style.display = 'none';
+			}
+		}
+	}
+	</script>
+</body>
+</html>
